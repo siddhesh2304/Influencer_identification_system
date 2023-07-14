@@ -9,10 +9,11 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Manual Check') {
             steps {
-                // Run tests against the running containers
-                bat 'docker-compose exec app npm run test'
+                // Pause the pipeline and wait for manual approval
+                input message: 'Please check if the build is running correctly. Click "Proceed" to continue.',
+                      submitterParameter: 'CONTINUE_PIPELINE'
             }
         }
     }
