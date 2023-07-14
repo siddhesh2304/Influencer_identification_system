@@ -10,7 +10,7 @@ To use the influencer identification system, you need to have the following inst
 ## Installation
 1. Clone the repository:
 Clone the repository: git clone https://github.com/your-username/influencer-identification-system.git
-2. Navigate to the project directory:packages: pip install -r requirements.txt
+2. Navigate to the project directory
  cd influencer-identification-system
 3. Create a .env file in the root directory of the project and define the required environment variables. Refer to the .env.example file for the list of variables and their format.
 
