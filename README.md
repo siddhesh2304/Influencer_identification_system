@@ -2,25 +2,25 @@
 
 The influencer identification system is a tool that helps businesses identify potential influencers on Twitter based on their reach, engagement, and other metrics. The system uses natural language processing techniques to extract relevant features from tweets and analyze the behavior and characteristics of Twitter users.
 
-# Requirements
+## Requirements
 To use the influencer identification system, you need to have the following installed:
+- Docker
+- Docker Compose
 
-Python 3.6 or later
-MongoDB
-Django
-You will also need to create a Twitter Developer account and obtain API credentials to access the Twitter API.
-
-# Installation
+## Installation
+1. Clone the repository:
 Clone the repository: git clone https://github.com/your-username/influencer-identification-system.git
-Install the required Python packages: pip install -r requirements.txt
-Configure the Twitter API credentials in config.py file
-Start the MongoDB server: mongod
-Start the Django server: python manage.py runserver
+2. Navigate to the project directory:packages: pip install -r requirements.txt
+ cd influencer-identification-system
+3. Create a .env file in the root directory of the project and define the required environment variables. Refer to the .env.example file for the list of variables and their format.
 
- # Usage
-Run the twitter_streaming.py file to collect tweets that match a specific keyword and date range.
-Run the data_processing.py file to preprocess and analyze the collected data.
-Access the influencer identification system app on http://localhost:8000/ to view the identified influencers and insights.
+4. Build and start the Docker containers:
+docker-compose up --build
+
+This command will build the Docker images and start the containers defined in the docker-compose.yml file. It will automatically set up the necessary services, including Node js and Mysql.
+6. Access the influencer identification system app on http://localhost:3000 to view the identified influencers and insights.
+
+
 
 # Contributors
 Siddhesh Singh( sidd23heshsingh@gmail.com )
