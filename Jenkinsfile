@@ -22,11 +22,5 @@ pipeline {
             // Clean up resources, stop and remove the containers
             bat 'docker-compose down'
         }
-        success {
-            // Actions to perform on successful build
-        }
-        failure {
-            // Actions to perform on build failure
-        }
     }
 }
