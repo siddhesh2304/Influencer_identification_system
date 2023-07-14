@@ -21,7 +21,7 @@ function nw(first,third,second){
   const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '007@dev00',
+    password: 'Mysql@Siddhesh',
     database: 'iis'
   });
   
