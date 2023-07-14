@@ -5,6 +5,8 @@ const bodyparser = require("body-parser");
 const { log } = require('console');
 const otherfile = require("./data_processing");
 const path = require('path');
+require('dotenv').config();
+
 
 const app = req();
 app.use(bodyparser.urlencoded({extended:true}));
@@ -29,10 +31,10 @@ app.post("/",function(req,res){
 // Get selected influencers as an array
 app.get("/influencers",function(req,res){
   const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Mysql@Siddhesh',
-    database: 'iis'
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE
   });
 
   connection.connect(function(err) {
